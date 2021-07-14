@@ -53,6 +53,9 @@ Route::get('/rota2', function (){
     return redirect()->route('site.rota1');
 })->name('site.rota2');
 
+Route::fallback(function (){
+    echo 'Essa rota não existe <a href="'.route('site.index').'">Clique aqui para retornar</a>';
+});
 //Route::redirect('/rota2', '/rota1');
 //Fins de teste
 /*Route::get('/contact/{nome}/{categoria_id}', function (string $nome, int $categoria_id = 1){

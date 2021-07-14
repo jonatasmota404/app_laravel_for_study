@@ -33,11 +33,11 @@ Route::get('/clientes', function (){
     return 'Clientes';
 });
 
-Route::get('/Fornecedores', function (){
+Route::get('/fornecedores', function (){
     return 'Fornecedores';
 });
 
-Route::get('/Produtos', function (){
+Route::get('/produtos', function (){
     return 'Produtos';
 });
 

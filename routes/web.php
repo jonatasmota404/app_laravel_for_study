@@ -44,7 +44,16 @@ Route::prefix('/app')->group(function (){
     })->name('app.produtos');
 });
 
+//Rotas para teste de redirecionamento
+Route::get('/rota1', function (){
+    echo 'Rota 1';
+})->name('site.rota1');
 
+Route::get('/rota2', function (){
+    return redirect()->route('site.rota1');
+})->name('site.rota2');
+
+//Route::redirect('/rota2', '/rota1');
 //Fins de teste
 /*Route::get('/contact/{nome}/{categoria_id}', function (string $nome, int $categoria_id = 1){
     echo "$nome  $categoria_id";

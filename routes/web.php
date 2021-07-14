@@ -24,6 +24,23 @@ Route::get('/about', [AboutController::class,'about']);
 
 Route::get('/contact', [ContactController::class, 'contact']);
 
+//Novas rotas teste
+Route::get('/login', function (){
+    return 'Login';
+});
+
+Route::get('/clientes', function (){
+    return 'Clientes';
+});
+
+Route::get('/Fornecedores', function (){
+    return 'Fornecedores';
+});
+
+Route::get('/Produtos', function (){
+    return 'Produtos';
+});
+
 //Fins de teste
 /*Route::get('/contact/{nome}/{categoria_id}', function (string $nome, int $categoria_id = 1){
     echo "$nome  $categoria_id";

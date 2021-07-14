@@ -24,22 +24,25 @@ Route::get('/about', [AboutController::class,'about']);
 
 Route::get('/contact', [ContactController::class, 'contact']);
 
-//Novas rotas teste
-Route::get('/login', function (){
-    return 'Login';
+Route::prefix('/app')->group(function (){
+    //Novas rotas teste
+    Route::get('/login', function (){
+        return 'Login';
+    });
+
+    Route::get('/clientes', function (){
+        return 'Clientes';
+    });
+
+    Route::get('/fornecedores', function (){
+        return 'Fornecedores';
+    });
+
+    Route::get('/produtos', function (){
+        return 'Produtos';
+    });
 });
 
-Route::get('/clientes', function (){
-    return 'Clientes';
-});
-
-Route::get('/fornecedores', function (){
-    return 'Fornecedores';
-});
-
-Route::get('/produtos', function (){
-    return 'Produtos';
-});
 
 //Fins de teste
 /*Route::get('/contact/{nome}/{categoria_id}', function (string $nome, int $categoria_id = 1){

@@ -1,6 +1,11 @@
 <?php
 
+//namespace App\Http\Controllers;
+use App\Http\Controllers\PrincipalController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\AboutController;
 use Illuminate\Support\Facades\Route;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -13,14 +18,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/home', function () {
-    return 'home';
-});
+Route::get('/', [PrincipalController::class, 'principal']);
 
-Route::get('/about', function () {
-    return 'about';
-});
+Route::get('/about', [AboutController::class,'about']);
 
-Route::get('/contact', function () {
-    return 'contact';
-});
+Route::get('/contact', [ContactController::class, 'contact']);

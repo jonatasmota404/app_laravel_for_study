@@ -8,6 +8,6 @@ class AboutController extends Controller
 {
     public function about()
     {
-        echo 'about';
+        return view('site.about.index');
     }
 }

@@ -24,6 +24,6 @@ Route::get('/about', [AboutController::class,'about']);
 
 Route::get('/contact', [ContactController::class, 'contact']);
 
-Route::get('/contact/{nome}', function ($nome){
-    echo $nome;
-});
+Route::get('/contact/{nome}/{categoria_id}', function (string $nome, int $categoria_id = 1){
+    echo "$nome  $categoria_id";
+})->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+');

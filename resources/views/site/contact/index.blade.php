@@ -1,13 +1,14 @@
 <h3>Contact</h3>
+
 <ul>
     <li>
-        <a href="/">HOME</a>
+        <a href="{{route('site.index')}}">HOME</a>
     </li>
     <li>
-        <a href="/contact">CONTACT</a>
+        <a href="{{route('site.contact')}}">CONTACT</a>
     </li>
     <li>
-        <a href="/about">
+        <a href="{{route('site.about')}}">
             ABOUT
         </a>
     </li>

@@ -18,29 +18,30 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [PrincipalController::class, 'principal']);
+Route::get('/', [PrincipalController::class, 'principal'])->name('site.index');
 
-Route::get('/about', [AboutController::class,'about']);
+Route::get('/about', [AboutController::class,'about'])->name('site.about');
 
-Route::get('/contact', [ContactController::class, 'contact']);
+Route::get('/contact', [ContactController::class, 'contact'])->name('site.contact');
+
+//Novas rotas teste
+Route::get('/login', function (){
+    return 'Login';
+})->name('site.login');
 
 Route::prefix('/app')->group(function (){
-    //Novas rotas teste
-    Route::get('/login', function (){
-        return 'Login';
-    });
 
     Route::get('/clientes', function (){
         return 'Clientes';
-    });
+    })->name('app.clientes');
 
     Route::get('/fornecedores', function (){
         return 'Fornecedores';
-    });
+    })->name('app.fornecedores');
 
     Route::get('/produtos', function (){
         return 'Produtos';
-    });
+    })->name('app.produtos');
 });
 
 

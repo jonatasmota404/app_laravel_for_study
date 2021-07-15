@@ -7,10 +7,15 @@
 echo "teste";
 
 @endphp
-@dd($fornecedores)
 
 @if(count($fornecedores) > 0)
     <h3>Existem Fornecedores</h3>
 @else
     <h3>Não existem</h3>
 @endif
+<br>
+@unless($fornecedores[0]['status'] == 'S')
+    <h3>Fornecedor Inativo</h3>
+@else
+    <h3>Fornecedor Ativo</h3>
+@endunless

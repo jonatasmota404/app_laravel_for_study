@@ -1,9 +1,11 @@
 <?php
 
 //namespace App\Http\Controllers;
+use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\TesteController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,9 +37,7 @@ Route::prefix('/app')->group(function (){
         return 'Clientes';
     })->name('app.clientes');
 
-    Route::get('/fornecedores', function (){
-        return 'Fornecedores';
-    })->name('app.fornecedores');
+    Route::get('/fornecedores', [FornecedorController::class, 'index'])->name('app.fornecedores');
 
     Route::get('/produtos', function (){
         return 'Produtos';
@@ -45,19 +45,9 @@ Route::prefix('/app')->group(function (){
 });
 
 //Rotas para teste de redirecionamento
-Route::get('/rota1', function (){
-    echo 'Rota 1';
-})->name('site.rota1');
+Route::get('/teste/{p1}/{p2}', [TesteController::class, 'teste'])->name('teste');
 
-Route::get('/rota2', function (){
-    return redirect()->route('site.rota1');
-})->name('site.rota2');
 
 Route::fallback(function (){
     echo 'Essa rota não existe <a href="'.route('site.index').'">Clique aqui para retornar</a>';
 });
-//Route::redirect('/rota2', '/rota1');
-//Fins de teste
-/*Route::get('/contact/{nome}/{categoria_id}', function (string $nome, int $categoria_id = 1){
-    echo "$nome  $categoria_id";
-})->where('categoria_id', '[0-9]+')->where('nome', '[A-Za-z]+');*/

@@ -20,5 +20,11 @@ echo "teste";
     <h3>Fornecedor Ativo</h3>
 @endunless--}}
 @isset($fornecedores)
+    <h3>Variavel existe</h3>
+@else
     <h3>Variavel não existe</h3>
 @endisset
+
+@empty($empty)
+    Variável vazia
+@endempty

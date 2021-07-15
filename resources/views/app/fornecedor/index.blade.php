@@ -2,7 +2,7 @@
 {{-- Comentario do interpretador do blade --}}
 
 {{-- bloco de codigo php puro --}}
-@php
+{{--@php
 //comentario normal
 echo "teste";
 
@@ -18,4 +18,7 @@ echo "teste";
     <h3>Fornecedor Inativo</h3>
 @else
     <h3>Fornecedor Ativo</h3>
-@endunless
+@endunless--}}
+@isset($fornecedores)
+    <h3>Variavel não existe</h3>
+@endisset

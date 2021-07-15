@@ -1,6 +1,7 @@
 <?php
 
 //namespace App\Http\Controllers;
+use App\Http\Controllers\FornecedorController;
 use App\Http\Controllers\PrincipalController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\AboutController;
@@ -36,9 +37,7 @@ Route::prefix('/app')->group(function (){
         return 'Clientes';
     })->name('app.clientes');
 
-    Route::get('/fornecedores', function (){
-        return 'Fornecedores';
-    })->name('app.fornecedores');
+    Route::get('/fornecedores', [FornecedorController::class, 'index'])->name('app.fornecedores');
 
     Route::get('/produtos', function (){
         return 'Produtos';

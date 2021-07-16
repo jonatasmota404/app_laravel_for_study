@@ -28,3 +28,8 @@ echo "teste";
 @empty($empty)
     Variável vazia
 @endempty
+
+@for($i=0; $i < 10; $i++)
+    {{$i}}
+    <br>
+@endfor

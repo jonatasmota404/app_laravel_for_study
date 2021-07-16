@@ -33,10 +33,15 @@ echo "teste";
     {{$i}}
     <br>
 @endfor--}}
-@php $array = []; @endphp
+@php $array = range(0,10); @endphp
 @forelse($array as $i)
+    {{$loop->iteration}}
     {{$i}}
     <br>
+    @if($loop->last)
+    {{$loop->count}}
+    @endif
 @empty
     Não tem nenhum numero no range
 @endforelse
+@{{ escapar tag de impressão }}

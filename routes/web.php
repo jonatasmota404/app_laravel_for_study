@@ -26,6 +26,8 @@ Route::get('/about', [AboutController::class,'about'])->name('site.about');
 
 Route::get('/contact', [ContactController::class, 'contact'])->name('site.contact');
 
+Route::post('/contact', [ContactController::class, 'contact'])->name('site.contact');
+
 //Novas rotas teste
 Route::get('/login', function (){
     return 'Login';

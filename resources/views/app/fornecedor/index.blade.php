@@ -28,12 +28,13 @@ echo "teste";
 @empty($empty)
     Variável vazia
 @endempty
-
+<br>
 {{--@for($i=0; $i < 10; $i++)
     {{$i}}
     <br>
 @endfor--}}
-@php $i=0; @endphp
-@while($i < 10)
-    {{$i += 2}}
-@endwhile
+@php $array = range(1, 100); @endphp
+@foreach($array as $i)
+    {{$i}}
+    <br>
+@endforeach

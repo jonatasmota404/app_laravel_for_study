@@ -8,6 +8,6 @@ class AboutController extends Controller
 {
     public function about()
     {
-        return view('site.about.index');
+        return view('site.about.index', ['titulo'=>'Sobre']);
     }
 }

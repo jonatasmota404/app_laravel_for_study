@@ -29,7 +29,11 @@ echo "teste";
     Variável vazia
 @endempty
 
-@for($i=0; $i < 10; $i++)
+{{--@for($i=0; $i < 10; $i++)
     {{$i}}
     <br>
-@endfor
+@endfor--}}
+@php $i=0; @endphp
+@while($i < 10)
+    {{$i += 2}}
+@endwhile

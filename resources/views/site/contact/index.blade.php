@@ -11,7 +11,10 @@
 
         <div class="informacao-pagina">
             <div class="contato-principal">
-                @include('site.layouts._partials.formulario')
+                @component('site.layouts._components.form_contato', ['borda' => 'borda-preta'])
+                    <p>A nossa equipe analisará sua mensagem e retornaremos o mais brevemente possível</p>
+                    <p>Nosso tempo médio de resposta é 48 horas.</p>
+                @endcomponent
             </div>
         </div>
     </div>

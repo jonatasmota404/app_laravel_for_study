@@ -40,3 +40,4 @@ echo "teste";
 @empty
     Não tem nenhum numero no range
 @endforelse
+@{{ escapar tag de impressão }}

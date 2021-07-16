@@ -33,8 +33,10 @@ echo "teste";
     {{$i}}
     <br>
 @endfor--}}
-@php $array = range(1, 100); @endphp
-@foreach($array as $i)
+@php $array = []; @endphp
+@forelse($array as $i)
     {{$i}}
     <br>
-@endforeach
+@empty
+    Não tem nenhum numero no range
+@endforelse

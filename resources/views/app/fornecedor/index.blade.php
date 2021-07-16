@@ -28,3 +28,15 @@ echo "teste";
 @empty($empty)
     Variável vazia
 @endempty
+<br>
+{{--@for($i=0; $i < 10; $i++)
+    {{$i}}
+    <br>
+@endfor--}}
+@php $array = []; @endphp
+@forelse($array as $i)
+    {{$i}}
+    <br>
+@empty
+    Não tem nenhum numero no range
+@endforelse
